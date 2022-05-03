@@ -7,10 +7,11 @@
     <div class="container flex justify-center">
         <form
             action="{{ route('products.update', $product->id) }}"
-            method="PUT"
+            method="POST"
             class="bg-white w-1/3 p-4 border-gray-100 shadow-xl rounded-lg"
         >
             @csrf
+            @method('PUT')
             <h2 class="text-2xl text-center py-4 mb-4 font-semibold">Editar Producto {{$product->id}} </h2>
 
             <input
